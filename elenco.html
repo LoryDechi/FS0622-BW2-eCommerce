@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dark Cafe Shop</title>
+  <!-- BOOTSTARP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- BOOTSTRAP -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <!-- BOOTSTRAP ICON -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!--FAVICON-->
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-32x32.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/stile.css">
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <section class="container-fluid img_header_elenco shadow">
+
+      <nav class="navbar navbar-expand-md brown">
+        <div class="container-fluid contenuti">
+          <a class="navbar-brand p-0" href="index.html">
+            <img src="assets/img/logo-no-background.png" alt="Logo azienda" width="120" height="130">
+          </a>
+
+
+
+          <div class="justify-content-end" id="navbarSupportedContent">
+
+            <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav align-items-baseline position-absolute end-0">
+                <li class="nav-item mt-2">
+                  <h5 id="saluto" class="text-light d-inline-block me-3"></h5>
+                </li>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-outline light" id="logout">
+                    Logout
+                    <i class="bi bi-box-arrow-left ms-2"></i>
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-outline light ms-md-2 mt-2 mt-md-0 me-3 ms-5"
+                    data-bs-toggle="modal" data-bs-target="#login" id="openLogin"><i
+                      class="bi bi-person-fill"></i></button>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-outline light ms-md-2 mt-2 mt-md-0 position-relative me-3 ms-5 " href="index.html"
+                    role="button"><i class="bi bi-house-fill"></i></a>
+                </li>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-outline light ms-md-2 mt-3 mt-md-0 position-relative me-3 ms-5"
+                    onclick="toggleCart()" id="cart">
+                    <i class="bi bi-cart-fill"> </i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                      id="numeroCarrello">
+                      0
+                    </span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="row justify-content-center align-items-center text-center d-flex h-50 text-white">
+        <div class="col-12">
+          <h1 class="display-1 miele" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="400">Dark cafe <br>Shop
+          </h1>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- MAIN ELENCO -->
+  <div class="container mt-5">
+    <div class="row justify-content-between">
+      <div id="wrapper" class="col-12 border-bottom">
+        <i id="search" class="bi bi-search float-end mb-3"></i>
+        <input class="float-end mb-2" id="inputWord" type="text" value="" placeholder="Cerca il prodotto...">
+      </div>
+
+
+      <!-- categorie -->
+      <div class="col-12 col-md-3 border-end mt-5" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button rounded-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                CATEGORIE
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+              <div id="categoriesWrapper" class="accordion-body">
+                <input class="form-check-input" type="radio" name="categories" id="tutte">
+                <label class="form-check-label" for="tutte">
+                  Tutte le categorie
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                PREZZO
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <span id="priceValue" class="float-end">&#8364;</span>
+                <input type="range" class="form-range" min="0" max="" value="0" id="customRange">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="elenco" class="col-12 col-md-9 mt-5 d-flex flex-wrap">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MODALE DETTAGLIO PRODOTTO -->
+  <div class="modal fade miomodal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row justify-content-between">
+            <div class="col-4 img-fluid">
+              <img id="img" width="180px">
+            </div>
+            <div class="col-8">
+              <h5 id="title"></h5>
+              <p id="desc"></p>
+              <p id="price"></p>
+              <button type="button" class="btn dark float-end" id="addShop">
+                Aggiungi
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- modale login-->
+  <div class="modal fade mt-3  miomodal" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginLabel">LOGIN</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <p id="erroreLogin"></p>
+            <label for="email" class="form-label">Email</label>
+            <div class="input-group">
+              <span class="input-group-text  miobordo">
+                <i class="bi bi-person-circle miomodal"></i>
+              </span>
+              <input type="email" id="email" name="email" class="form-control miobordo"
+                placeholder="Inserisci qui la tua email" required>
+            </div>
+
+            <label for="password" class="form-label mt-3">Password</label>
+            <div class="input-group">
+              <span class="input-group-text miobordo">
+                <i class="bi bi-lock-fill miomodal"></i>
+              </span>
+              <input type="password" id="password" name="password" class="form-control miobordo"
+                placeholder="Inserisci qui la tua password" required>
+              <button class="btn btn-outline-secondary miobordo occhio" type="button" id="button-addon2"
+                onclick="mostra()">
+                <i class="bi bi-eye-fill miomodal "></i>
+              </button>
+            </div>
+
+            <button type="button" class="btn miobtn mt-3" id="accedi">LOGIN</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <p class="text-start">Non sei ancora registrato?</p>
+          <button type="button" class="btn miobtn occhio btn-sm" data-bs-toggle="modal"
+            data-bs-target="#modalRegistrati">Registrati</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- modale registrati -->
+  <div class="modal fade mt-3 miomodal" id="modalRegistrati" tabindex="-1" aria-labelledby="modalRegistratiLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRegistratiLabel">REGISTRATI</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pb-3">
+          <h5 class="text-danger text-center mt-3" id="errore"></h5>
+          <div class="col-12 p-3" id="success">
+            <h5 class="text-success text-center">Registrazione effettuata!</h5>
+          </div>
+          <form class="form">
+            <label for="nomeUtente" class="form-label mt-3">Nome</label>
+            <input type="nomeUtente" id="nomeUtente" name="nomeUtente" class="form-control miobordo"
+              placeholder="Inserisci qui il tuo nome" required>
+
+            <label for="emailUtente" class="form-label mt-3">Email</label>
+            <input type="emailUtente" id="emailUtente" name="emailUtente" class="form-control miobordo"
+              placeholder="Inserisci qui la tua email" required>
+            <p id="invalidEmail"></p>
+
+            <label for="passwordRegistrati" class="form-label mt-3">Password</label>
+            <div class="input-group">
+              <input type="password" id="passwordRegistrati" name="passwordRegistrati" class="form-control miobordo"
+                placeholder="Inserisci qui la tua password" required>
+              <button class="btn btn-outline-secondary miobordo occhio" type="button" onclick="mostraRegistrazione()">
+                <i class="bi bi-eye-fill"></i>
+              </button>
+            </div>
+            <p id="invalidPass"></p>
+
+
+            <label for="confermaPassword" class="form-label mt-3">Conferma Password</label>
+            <input type="password" id="confermaPassword" name="confermaPassword" class="form-control miobordo"
+              placeholder="Conferma qui la tua password" required disabled>
+            <p id="invalidMatch"></p>
+
+            <button type="button" class="btn miobtn mt-3" id="registrati">Registrati</button>
+          </form>
+          <div id="passInfo">
+            <h6 class="text-center">La password deve contenere:</h6>
+            <ul>
+              <li id="lettera">Almeno una lettera</li>
+              <li id="maiuscola">Almeno una maiuscola</li>
+              <li id="numero">Almeno un numero</li>
+              <li id="lunghezza">Almeno 6 caratteri</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARRELLO -->
+  <div class="sidecart overflow-auto">
+    <div class="text-main h3 mt-3 px-4">
+      Carrello
+      <div class="d-inline" id="chiudi"><i class="bi bi-arrow-right text-success float-end mt-1"></i>
+      </div>
+      <div class="notification" id="notifica">
+        <p class="text-center text-success">Grazie!</p>
+        <p class="text-center text-success">Acquisto effettuato!</p>
+        <span class="progress"></span>
+      </div>
+    </div>
+    <ul class="nav flex-column" id="carrello">
+    </ul>
+
+    <div class="border-top possition-absolute bottom-0 w-100">
+      <div class="text-light h6 text-end mx-3 mt-5">Spedizone: <span class="text-main">Gratuita</span>
+      </div>
+      <div class="text-light h5 text-end mx-3">Totale: <span class="text-main" id="totaleCarrello"> 0 €</span></div>
+      <div class="p-2">
+        <button type="button" class="btn light btn-lg mt-4 w-100" id="acquista">Acquista</button>
+      </div>
+    </div>
+  </div>
+  <!--SERVIZI-->
+  <div class="container caffe" id="servizi">
+    <div class="row gx-5">
+      <div class="col-sm-3">
+        <p><i class="bi bi-truck"></i></p>
+        <h6>CONSEGNA GRATUITA</h6>
+        <p> Decidi come, dove e quando vuoi ricevere il tuo ordine. La consegna è sempre gratuita.</p>
+      </div>
+      <div class="col-sm-3">
+        <p><i class="bi bi-award"></i></p>
+        <h6>GARANZIA 24 MESI</h6>
+        <p> Le nostre macchine sono coperte da garanzia 2 anni. Offriamo assistenza tecnica a tutti i nostri
+          clienti.</p>
+      </div>
+      <div class="col-sm-3">
+        <p><i class="bi bi-info-circle"></i></p>
+        <h6>ASSISTENZA CLIENTI 24/7</h6>
+        <p> I nostri Specialisti del Caffè sono a tua disposizione. Contatta il Numero Verde 800 00 00 00.</p>
+      </div>
+      <div class="col-sm-3">
+        <p><i class="bi bi-shield-lock"></i></p>
+        <h6>PAGAMENTO SICURO</h6>
+        <p> Con la crittografia SSL le informazioni sensibili sono sempre trasmesse in modo sicuro.</p>
+
+      </div>
+    </div>
+  </div>
+  <!-- FOOTER -->
+  <footer class="container-fluid footer">
+    <div class="row">
+      <div class="col text-center pt-4">
+        <div class=" border-bottom w-50 mx-auto">
+          <img src="assets/img/logo-no-background.png" class="mb-4" alt="Dark Cafe" width="70" height="80">
+        </div>
+      </div>
+
+      <div class="container text-center py-4 ">
+        <div class="row">
+          <div class="col-sm-3">
+            <a href="index.html" class="nav-link mb-2">Home</a>
+          </div>
+          <div class="col-sm-3">
+            <a href="#" class="nav-link mb-2">Prodotti</a>
+          </div>
+          <div class="col-sm-3">
+            <a href="#" class="nav-link mb-2">Contatti</a>
+          </div>
+          <div class="col-sm-3">
+            <a href="index.html#chiSiamo" class="nav-link mb-2">Chi siamo</a>
+          </div>
+        </div>
+        <div class="container text-center pt-4">
+          <section class="mb-4 py-3">
+            <a class="text-muted" href="https://www.facebook.com/" target="_blank"><i
+                class="bi bi-facebook social p-4"></i></a>
+            <a class="text-muted" href="https://twitter.com/" target="_blank"><i
+                class="bi bi-twitter social p-4"></i></a>
+            <a class="text-muted" href="https://www.instagram.com/" target="_blank"><i
+                class="bi bi-instagram social p-4"></i></a>
+          </section>
+          <p>&copy; 2022 Dark Cafe - All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+    <div class="credit-cards text-center pb-4">
+      <i class="fa-brands fa-cc-visa social px-3"></i>
+      <i class="fa-brands fa-cc-mastercard social px-3"></i>
+      <i class="fa-brands fa-cc-paypal social px-3"></i>
+      <i class="fa-brands fa-cc-amex social px-3"></i>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://kit.fontawesome.com/454b036edd.js" crossorigin="anonymous"></script>
+  <script src="/assets/js/login.js"></script>
+  <script src="/assets/js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+</body>
+
+</html>

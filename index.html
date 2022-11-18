@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0, user-scalable=no">
+    <!-- CSS BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JS BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--font Raleway-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <!--font Playfair-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <!--FAVICON-->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-32x32.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/stile.css">
+
+    <title>Dark Cafè</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="jumbotron jumbotron-fluid">
+
+
+
+        <video autoplay muted loop>
+            <source src="assets/img/CaffÃ¨ - 80134.mp4" data-src="" type="video/mp4">
+        </video>
+        <nav class="navbar navbar-expand-md brown">
+            <div class="container-fluid contenuti">
+                <a class="navbar-brand p-0" href="index.html">
+                    <img src="assets/img/logo-no-background.png" alt="Logo azienda" width="120" height="130">
+                </a>
+
+
+                <div class="justify-content-end" id="navbarSupportedContent">
+
+                    <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav align-items-baseline position-absolute end-0">
+                            <li class="nav-item mt-2">
+                                <h5 id="saluto" class="text-light d-inline-block me-3"></h5>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-outline light m-2" id="logout">
+                                    Logout
+                                    <i class="bi bi-box-arrow-left ms-2"></i>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-outline light m-2 me-3 me-sm-4"
+                                    data-bs-toggle="modal" data-bs-target="#login" id="openLogin"><i
+                                        class="bi bi-person-fill "></i></button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button"
+                                    class="btn btn-outline light ms-md-2 mt-3 mt-md-0 position-relative me-3 ms-5"
+                                    onclick="toggleCart()" id="cart">
+                                    <i class="bi bi-cart-fill"> </i>
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                        id="numeroCarrello">
+                                        0
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container text-white" id="testo">
+            <div class="verticaltitle"></div>
+            <h1 class="display-4" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">Dark cafe!</h1>
+            <p class="lead" data-aos="fade-right" data-aos-duration="700" data-aos-delay="700">Tutto ciò che facciamo è
+                una questione di cuore, corpo e anima. La nostra missione è fornire caffè di qualità da fonti
+                sostenibili, raccolte a mano.</p>
+            <p data-aos="fade-right" data-aos-duration="700" data-aos-delay="1000">Scopri le nostre capsule con una
+                vasta gamma di miscele, dalla Robusta all'Arabica.</p>
+            <a class="btn light btn-lg mt-4" href="elenco.html" role="button" data-aos="zoom-in" data-aos-duration="900"
+                data-aos-delay="1200">Acquista ora</a>
+        </div>
+    </div>
+    <!-- SECTION -->
+    <div class="container-fluid img-section" id="chiSiamo">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-md-6 text-center">
+                    <img src="https://static.wixstatic.com/media/84770f_e0fa23f0ecda46dc95424cf148bc1430~mv2.png/v1/fill/w_654,h_666,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Cup.png"
+                        class="img-coffe mx-auto" alt="Tazzina di caffè">
+                </div>
+                <div class="col-12 col-md-6 pb-5 pb-md-0">
+                    <h2 class="text-main display-4 w-50 border-bottom">Chi Siamo</h2>
+                    <h5>E-commerce giovane e di spicco.</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem corrupti sit quo laborum
+                        excepturi voluptates aut itaque dignissimos doloribus nihil, nisi minus consequatur tempore
+                        necessitatibus omnis earum! ignissimos doloribus nihil, nisi minus consequatur tempore
+                        necessitatibus omnis earum</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- "SECTION" 2 -->
+    <div class="container-fluid img-section-2"></div>
+
+    <!-- Slider-->
+    <div class="container mt-5 caffe">
+        <div class="row justify-content-center align-items-center p-5">
+            <div class="col-12 text-center">
+                <h3>Best Sellers</h3>
+            </div>
+            <div class="col-12">
+                <div class=" container owl-carousel owl-theme mt-5" data-aos="fade-left" data-aos-duration="700"
+                    data-aos-delay="600">
+                    <div class="item">
+                        <img src="assets/img_prodotti/busta-1000-cioccolato.jpeg" class="" alt="...">
+                        <h5 class="card-title text-center py-5 nofont">Miscela cioccolato</h5>
+                    </div>
+                    <div class="item">
+                        <img src="assets/img_prodotti/busta-1000.jpeg" class="" alt="...">
+                        <h5 class="card-title text-center py-5 nofont">Miscela delicata 1kg</h5>
+                    </div>
+                    <div class="item">
+                        <img src="assets/img_prodotti/busta-500.jpeg" class="" alt="...">
+                        <h5 class="card-title text-center py-5 nofont">Miscela brasile 500g</h5>
+                    </div>
+                    <div class="item">
+                        <img src="assets/img_prodotti/box-1.jpeg" class="" alt="...">
+                        <h5 class="card-title text-center py-5 nofont">Cialde Lavazza</h5>
+                    </div>
+                    <div class="item">
+                        <img src="assets/img_prodotti/box-5.jpeg" class="" alt="...">
+                        <h5 class="card-title text-center py-5 nofont">Cialde Illy</h5>
+                    </div>
+                    <div class="item">
+                        <img src="assets/img_prodotti/box-2.jpeg" class="" alt="...">
+                        <h5 class="card-title text-center py-5 nofont">Cialde Borbone</h5>
+                    </div>
+                    <div class="item">
+                        <img src="assets/img_prodotti/box-3.jpeg" class=" " alt="...">
+                        <h5 class="card-title text-center py-5 nofont">Cialde Nespresso </h5>
+                    </div>
+                    <div class="item">
+                        <img src="assets/img_prodotti/box-4.jpeg" class="" alt="...">
+                        <h5 class="card-title text-center py-5 nofont">Cialde Java</h5>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a class="btn dark btn-lg w-25" href="elenco.html" role="button" data-aos="zoom-in"
+                        data-aos-duration="900" data-aos-delay="400">Vedi tutti i prodotti</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- SECTION 4 -->
+    <div class="container-fluid mt-5">
+        <div class="row justify-content-center align-items-center bg-coffe p-3">
+            <div class="col-6 col-md-6 position-relative">
+                <div class="phone mx-auto">
+                    <img src="/assets/img/screen-home.png" alt="app mobile">
+                    <div class="circle mx-auto"></div>
+                </div>
+            </div>
+            <div class="col-6 col-md-6 text-main phone-container">
+                <h4 class="nofont">Save Time & Money</h4>
+                <h2 class="display-4 nofont">Shop the best Coffe wherever you want</h2>
+                <div class="d-flex paymant">
+                    <img src="https://static.wixstatic.com/media/c837a6_71e02b9a534c442e8bff4121c61dc9f2~mv2.png/v1/fill/w_157,h_56,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Appstore_2.png"
+                        alt="App Store">
+                    <img src="https://static.wixstatic.com/media/c837a6_f8a32e83150d47d9b3b06eb8ab422edc~mv2.png/v1/fill/w_173,h_56,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Google%20Play.png"
+                        alt="Google Play">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="container caffe" id="servizi">
+        <div class="row gx-5">
+            <div class="col-sm-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+                <p><i class="bi bi-truck"></i></p>
+                <h6>CONSEGNA GRATUITA</h6>
+                <p> Decidi come, dove e quando vuoi ricevere il tuo ordine. La consegna è sempre gratuita.</p>
+            </div>
+            <div class="col-sm-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="500">
+                <p><i class="bi bi-award"></i></p>
+                <h6>GARANZIA 24 MESI</h6>
+                <p> Le nostre macchine sono coperte da garanzia 2 anni. Offriamo assistenza tecnica a tutti i nostri
+                    clienti.</p>
+            </div>
+            <div class="col-sm-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="700">
+                <p><i class="bi bi-info-circle"></i></p>
+                <h6>ASSISTENZA CLIENTI 24/7</h6>
+                <p> I nostri Specialisti del Caffè sono a tua disposizione. Contatta il Numero Verde 800 00 00 00.</p>
+            </div>
+            <div class="col-sm-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="900">
+                <p><i class="bi bi-shield-lock"></i></p>
+                <h6>PAGAMENTO SICURO</h6>
+                <p> Con la crittografia SSL le informazioni sensibili sono sempre trasmesse in modo sicuro.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- modale login-->
+    <div class="modal fade mt-3  miomodal" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginLabel">LOGIN</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <p id="erroreLogin"></p>
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-text  miobordo">
+                                <i class="bi bi-person-circle miomodal"></i>
+                            </span>
+                            <input type="email" id="email" name="email" class="form-control miobordo"
+                                placeholder="Inserisci qui la tua email" required>
+                        </div>
+
+                        <label for="password" class="form-label mt-3">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text miobordo">
+                                <i class="bi bi-lock-fill miomodal"></i>
+                            </span>
+                            <input type="password" id="password" name="password" class="form-control miobordo"
+                                placeholder="Inserisci qui la tua password" required>
+                            <button class="btn btn-outline-secondary miobordo occhio" type="button" id="button-addon2"
+                                onclick="mostra()">
+                                <i class="bi bi-eye-fill miomodal "></i>
+                            </button>
+                        </div>
+
+                        <button type="button" class="btn miobtn mt-3" id="accedi">LOGIN</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p class="text-start">Non sei ancora registrato?</p>
+                    <button type="button" class="btn miobtn occhio btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#modalRegistrati">Registrati</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- modale registrati -->
+    <div class="modal fade mt-3 miomodal" id="modalRegistrati" tabindex="-1" aria-labelledby="modalRegistratiLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRegistratiLabel">REGISTRATI</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pb-3">
+                    <h5 class="text-danger text-center mt-3" id="errore"></h5>
+                    <div class="col-12 p-3" id="success">
+                        <h5 class="text-success text-center">Registrazione effettuata!</h5>
+                    </div>
+                    <form class="form">
+                        <label for="nomeUtente" class="form-label mt-3">Nome</label>
+                        <input type="nomeUtente" id="nomeUtente" name="nomeUtente" class="form-control miobordo"
+                            placeholder="Inserisci qui il tuo nome" required>
+
+                        <label for="emailUtente" class="form-label mt-3">Email</label>
+                        <input type="emailUtente" id="emailUtente" name="emailUtente" class="form-control miobordo"
+                            placeholder="Inserisci qui la tua email" required>
+                        <p id="invalidEmail"></p>
+
+                        <label for="passwordRegistrati" class="form-label mt-3">Password</label>
+                        <div class="input-group">
+                            <input type="password" id="passwordRegistrati" name="passwordRegistrati"
+                                class="form-control miobordo" placeholder="Inserisci qui la tua password" required>
+                            <button class="btn btn-outline-secondary" type="button" onclick="mostraRegistrazione()">
+                                <i class="bi bi-eye-fill"></i>
+                            </button>
+                        </div>
+                        <p id="invalidPass"></p>
+
+
+                        <label for="confermaPassword" class="form-label mt-3">Conferma Password</label>
+                        <input type="password" id="confermaPassword" name="confermaPassword"
+                            class="form-control miobordo" placeholder="Conferma qui la tua password" required disabled>
+                        <p id="invalidMatch"></p>
+
+                        <button type="button" class="btn miobtn mt-3" id="registrati">Registrati</button>
+                    </form>
+                    <div id="passInfo">
+                        <h6 class="text-center">La password deve contenere:</h6>
+                        <ul>
+                            <li id="lettera">Almeno una lettera</li>
+                            <li id="maiuscola">Almeno una maiuscola</li>
+                            <li id="numero">Almeno un numero</li>
+                            <li id="lunghezza">Almeno 6 caratteri</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- carrello -->
+    <div class="sidecart overflow-auto">
+
+        <div class="text-main h3 mt-3 px-4">
+            Carrello
+            <div class="d-inline" id="chiudi"><i class="bi bi-arrow-right text-success float-end mt-1"></i>
+            </div>
+            <div class="notification" id="notifica">
+                <p class="text-center text-success">Grazie!</p>
+                <p class="text-center text-success">Acquisto effettuato!</p>
+                <span class="progress"></span>
+            </div>
+        </div>
+
+        <ul class="nav flex-column" id="carrello">
+
+
+        </ul>
+
+        <div class="border-top possition-absolute bottom-0 w-100">
+            <div class="text-light h6 text-end mx-3 mt-5">Spedizone: <span class="text-main">Gratuita</span>
+            </div>
+            <div class="text-light h5 text-end mx-3">Totale: <span class="text-main" id="totaleCarrello"> 0 €</span>
+            </div>
+            <div class="p-2">
+                <button type="button" class="btn light btn-lg mt-4 w-100" id="acquista">Acquista</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="container-fluid footer">
+        <div class="row">
+            <div class="col text-center pt-4">
+                <div class=" border-bottom w-50 mx-auto">
+                    <img src="assets/img/logo-no-background.png" class="mb-4" alt="Dark Cafe" width="70" height="80">
+                </div>
+            </div>
+
+            <div class="container text-center py-4 ">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <a href="#" class="nav-link mb-2">Home</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="elenco.html" class="nav-link mb-2">Prodotti</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="#" class="nav-link mb-2">Contatti</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="#chiSiamo" class="nav-link mb-2">Chi siamo</a>
+                    </div>
+                </div>
+                <div class="container text-center pt-4">
+                    <section class="mb-4 py-3">
+                        <a class="text-muted" href="https://www.facebook.com/" target="_blank"><i
+                                class="bi bi-facebook social p-4"></i></a>
+                        <a class="text-muted" href="https://twitter.com/" target="_blank"><i
+                                class="bi bi-twitter social p-4"></i></a>
+                        <a class="text-muted" href="https://www.instagram.com/" target="_blank"><i
+                                class="bi bi-instagram social p-4"></i></a>
+                    </section>
+                    <p>&copy; 2022 Dark Cafe - All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+        <div class="credit-cards text-center pb-4">
+            <i class="fa-brands fa-cc-visa social px-3"></i>
+            <i class="fa-brands fa-cc-mastercard social px-3"></i>
+            <i class="fa-brands fa-cc-paypal social px-3"></i>
+            <i class="fa-brands fa-cc-amex social px-3"></i>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+    </script>
+
+    <script src="https://kit.fontawesome.com/454b036edd.js" crossorigin="anonymous"></script>
+
+    <script src="assets/js/login.js"></script>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: false,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        })  
+    </script>
+
+
+</body>
+
+</html>

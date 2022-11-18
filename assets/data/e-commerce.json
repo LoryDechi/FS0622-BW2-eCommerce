@@ -1,0 +1,217 @@
+{
+  "utenti": [
+    {
+      "nome": "Lorenzo",
+      "email": "prova@hotmail.it",
+      "password": "a1Aaaa",
+      "carrello": [],
+      "id": 1
+    },
+    {
+      "nome": "Davide",
+      "email": "davide2000alfonsi@gmail.com",
+      "password": "12345Davide",
+      "carrello": [],
+      "id": 2
+    },
+    {
+      "nome": "giulia",
+      "email": "giulia.franzosi@hotmail.it",
+      "password": "1234Abcd",
+      "carrello": [],
+      "id": 6
+    }
+  ],
+  "articoli": [
+    {
+      "id": 1,
+      "img": "assets/img_prodotti/busta-500.jpeg",
+      "imgDue": "assets/img_prodotti/chicco-caffe-brasile.jpg",
+      "category": "Caffe",
+      "marca": "Miscela Brasile",
+      "formato": 500,
+      "formatoMax": 1000,
+      "descrizione": "Il caffè brasiliano ha un gusto intenso, un aroma dolce e spesso presenta spesso note di cioccolato e noci",
+      "prezzo": 13.99
+    },
+    {
+      "id": 2,
+      "img": "assets/img_prodotti/busta-1000.jpeg",
+      "imgDue": "assets/img_prodotti/chicco-caffe-brasile.jpg",
+      "category": "Caffe",
+      "marca": "Miscela Delicata",
+      "formato": 500,
+      "formatoMax": 1000,
+      "descrizione": "Gusto delicato, note aromatiche legnose",
+      "prezzo": 10.99
+    },
+    {
+      "id": 3,
+      "img": "assets/img_prodotti/busta-1000-cioccolato.jpeg",
+      "imgDue": "assets/img_prodotti/cioccolata.png",
+      "category": "Caffe",
+      "marca": "Miscela Cioccolato",
+      "formato": 500,
+      "formatoMax": 1000,
+      "descrizione": "Quando il profumo del caffè incontra il gusto dolce del cioccolato, danno vita ad una fantastica esperienza sensoriale.",
+      "prezzo": 10.99
+    },
+    {
+      "id": 4,
+      "img": "assets/img_prodotti/busta-rhum.jpeg",
+      "imgDue": "assets/img_prodotti/rhum.jpg",
+      "category": "Caffe",
+      "marca": "Miscela Rhum",
+      "formato": 500,
+      "formatoMax": 1000,
+      "descrizione": "Una miscela ricca, speziata, un sorso di questo caffè vi trasporterà sulle spiagge caraibiche.",
+      "prezzo": 10.99
+    },
+    {
+      "id": 5,
+      "img": "assets/img_prodotti/busta-vaniglia.jpeg",
+      "imgDue": "assets/img_prodotti/vaniglia-1.png",
+      "category": "Caffe",
+      "marca": "Miscela vaniglia",
+      "formato": 500,
+      "formatoMax": 1000,
+      "descrizione": "Il connubio perfetto tra la nostra miscela selezionata dalla Colombia e la vaniglia del Madagascar",
+      "prezzo": 10.99
+    },
+    {
+      "id": 6,
+      "img": "assets/img_prodotti/box-1.jpeg",
+      "imgDue": "assets/img_prodotti/capsulaoro.jpeg",
+      "category": "Capsule",
+      "marca": "Lavazza",
+      "tipologia": "Box da 10 capsule",
+      "gusto": "Intenso",
+      "prezzo": 4.55
+    },
+    {
+      "id": 7,
+      "img": "assets/img_prodotti/box-4.jpeg",
+      "imgDue": "assets/img_prodotti/capsulaoro.jpeg",
+      "category": "Capsule",
+      "marca": "Java",
+      "tipologia": "Box da 20 capsule",
+      "gusto": "Intenso",
+      "prezzo": 9.35
+    },
+    {
+      "id": 8,
+      "img": "assets/img_prodotti/box-3.jpeg",
+      "imgDue": "assets/img_prodotti/capsulaoro.jpeg",
+      "category": "Capsule",
+      "marca": "Nespresso",
+      "tipologia": "Box da 30 capsule",
+      "gusto": "Intenso",
+      "prezzo": 13.57
+    },
+    {
+      "id": 9,
+      "img": "assets/img_prodotti/box-2.jpeg",
+      "imgDue": "assets/img_prodotti/capsulablu.jpeg",
+      "category": "Capsule",
+      "marca": "Borbone",
+      "tipologia": "Box da 20 capsule",
+      "gusto": "Delicato",
+      "prezzo": 9.55
+    },
+    {
+      "id": 10,
+      "img": "assets/img_prodotti/box-5.jpeg",
+      "imgDue": "assets/img_prodotti/capsulaRossa.jpeg",
+      "category": "Capsule",
+      "marca": "Illy",
+      "tipologia": "Box da 15 capsule",
+      "gusto": "Decaffeinato",
+      "prezzo": 5.75
+    },
+    {
+      "id": 11,
+      "img": "assets/img_prodotti/macchinetta1f.jpeg",
+      "imgDue": "assets/img_prodotti/macchinetta1l.jpeg",
+      "category": "Macchinetta",
+      "marca": "Nespresso Essenza Mini",
+      "descrizione": "Macchina per caffè",
+      "prezzo": 109.99
+    },
+    {
+      "id": 12,
+      "img": "assets/img_prodotti/macchinetta2f.jpeg",
+      "imgDue": "assets/img_prodotti/macchinetta2l.jpeg",
+      "category": "Macchinetta",
+      "marca": "Nespresso CitiZ&Milk Platinum",
+      "descrizione": "Macchina per caffè e cappuccino",
+      "prezzo": 289.99
+    },
+    {
+      "id": 13,
+      "img": "assets/img_prodotti/macchinetta3f.jpeg",
+      "imgDue": "assets/img_prodotti/macchinetta3l.jpeg",
+      "category": "Macchinetta",
+      "marca": "Nespresso Creatista Pro",
+      "descrizione": "Macchina professionale per caffè e cappuccino",
+      "prezzo": 749.99
+    },
+    {
+      "id": 14,
+      "img": "assets/img_prodotti/macchinetta4f.jpeg",
+      "imgDue": "assets/img_prodotti/macchinetta4l.jpeg",
+      "category": "Macchinetta",
+      "marca": "Nespresso Lattissima One",
+      "descrizione": "Macchina per caffè e cappuccino",
+      "prezzo": 279.99
+    },
+    {
+      "id": 15,
+      "img": "assets/img_prodotti/macchinetta5f.jpeg",
+      "imgDue": "assets/img_prodotti/macchinetta5l.jpeg",
+      "category": "Macchinetta",
+      "marca": "Nespresso Essenza Mini Limited Edition",
+      "descrizione": "Macchina per caffè",
+      "prezzo": 119.99
+    },
+    {
+      "id": 16,
+      "img": "assets/img_prodotti/portacapsule.jpeg",
+      "category": "Accessori capsule",
+      "marca": "Nespresso",
+      "descrizione": "Portacapsule da bancone",
+      "prezzo": 20.55
+    },
+    {
+      "id": 17,
+      "img": "assets/img_prodotti/reciclacapsule.jpeg",
+      "category": "Accessori capsule",
+      "marca": "Nespresso",
+      "descrizione": "Contenitore per riciclare le capsule",
+      "prezzo": 19.99
+    },
+    {
+      "id": 18,
+      "img": "assets/img_prodotti/montalatte.jpg",
+      "category": "Accessori caffè",
+      "marca": "Bialetti",
+      "descrizione": "Montalatte",
+      "prezzo": 31.99
+    },
+    {
+      "id": 19,
+      "img": "assets/img_prodotti/tazzinecaffe.jpeg",
+      "category": "Accessori caffè",
+      "marca": "Nespresso",
+      "descrizione": "Tazzine in vetro per caffè",
+      "prezzo": 24.85
+    },
+    {
+      "id": 20,
+      "img": "assets/img_prodotti/tazzecappuccino.jpeg",
+      "category": "Accessori caffè",
+      "marca": "Nespresso",
+      "descrizione": "Tazze in vetro per cappuccino",
+      "prezzo": 49.99
+    }
+  ]
+}
