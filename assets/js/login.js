@@ -1,6 +1,6 @@
 // definizone della classe per creare gli utenti
 class Users {
-    constructor(_nome, _email, _password, _carrello, _storico) {
+    constructor(_nome, _email, _password, _carrello) {
         this.nome = _nome;
         this.email = _email;
         this.password = _password;
